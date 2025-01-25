@@ -30,7 +30,8 @@ const createUser = async (req, res) => {
         favoriteColor: req.body.favoriteColor,
         birthday: req.body.birthday
     };
-    const response = await mongodb.getDatabase().db().collection('users').insertOne({ _id: userId }, user)
+    const response = await mongodb.getDatabase().db().collection('users').insertOne({ _id: userId, ...user });
+
     if (response.acknowledged) {
         res.status(200).send();
     } else {
@@ -48,7 +49,8 @@ const updateUser = async (req, res) => {
         favoriteColor: req.body.favoriteColor,
         birthday: req.body.birthday
     };
-    const response = await mongodb.getDatabase().db().collection('users').replaceOne({ _id: userId }, user)
+    const response = await mongodb.getDatabase().db().collection('users').replaceOne({ _id: userId }, { _id: userId, ...user });
+    
     if (response.modifiedCount > 0) {
         res.status(200).send();
     } else {
