@@ -3,6 +3,6 @@ const router = express.Router();
 
 router.use('/', require('./swagger'));
 
-router.use('/users', require('./users'));
+router.use('/teams', require('./teams'));
 
 module.exports = router;

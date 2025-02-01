@@ -1,17 +1,28 @@
 {
   "swagger": "2.0",
   "info": {
-    "title": "Users Api",
-    "description": "Users Api",
+    "title": "League Api",
+    "description": "League Api",
     "version": "1.0.0"
   },
-  "host": "contacts-ydso.onrender.com",
+  "host": "localhost:3000",
   "basePath": "/",
   "schemes": [
+    "http",
     "https"
   ],
   "paths": {
-    "/users/": {
+    "/api-docs": {
+      "get": {
+        "description": "",
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/teams/": {
       "get": {
         "description": "",
         "produces": [
@@ -32,19 +43,16 @@
             "schema": {
               "type": "object",
               "properties": {
-                "firstName": {
+                "name": {
                   "example": "any"
                 },
-                "lastName": {
+                "city": {
                   "example": "any"
                 },
-                "email": {
+                "wins": {
                   "example": "any"
                 },
-                "favoriteColor": {
-                  "example": "any"
-                },
-                "birthday": {
+                "losses": {
                   "example": "any"
                 }
               }
@@ -61,7 +69,7 @@
         }
       }
     },
-    "/users/{id}": {
+    "/teams/{id}": {
       "get": {
         "description": "",
         "produces": [
@@ -96,19 +104,16 @@
             "schema": {
               "type": "object",
               "properties": {
-                "firstName": {
+                "name": {
                   "example": "any"
                 },
-                "lastName": {
+                "city": {
                   "example": "any"
                 },
-                "email": {
+                "wins": {
                   "example": "any"
                 },
-                "favoriteColor": {
-                  "example": "any"
-                },
-                "birthday": {
+                "losses": {
                   "example": "any"
                 }
               }
@@ -132,30 +137,6 @@
             "in": "path",
             "required": true,
             "type": "string"
-          },
-          {
-            "name": "body",
-            "in": "body",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "firstName": {
-                  "example": "any"
-                },
-                "lastName": {
-                  "example": "any"
-                },
-                "email": {
-                  "example": "any"
-                },
-                "favoriteColor": {
-                  "example": "any"
-                },
-                "birthday": {
-                  "example": "any"
-                }
-              }
-            }
           }
         ],
         "responses": {
