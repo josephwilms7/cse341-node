@@ -5,7 +5,7 @@
     "description": "League Api",
     "version": "1.0.0"
   },
-  "host": "contacts-ydso.onrender.com",
+  "host": "league-dbrp.onrender.com",
   "basePath": "/",
   "schemes": [
     "https"
