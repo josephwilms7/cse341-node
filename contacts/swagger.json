@@ -1,28 +1,17 @@
 {
   "swagger": "2.0",
   "info": {
-    "title": "League Api",
-    "description": "League Api",
+    "title": "Users Api",
+    "description": "Users Api",
     "version": "1.0.0"
   },
-  "host": "localhost:3000",
+  "host": "contacts-ydso.onrender.com",
   "basePath": "/",
   "schemes": [
-    "http",
     "https"
   ],
   "paths": {
-    "/api-docs": {
-      "get": {
-        "description": "",
-        "responses": {
-          "default": {
-            "description": ""
-          }
-        }
-      }
-    },
-    "/teams/": {
+    "/users/": {
       "get": {
         "description": "",
         "produces": [
@@ -43,16 +32,19 @@
             "schema": {
               "type": "object",
               "properties": {
-                "name": {
+                "firstName": {
                   "example": "any"
                 },
-                "city": {
+                "lastName": {
                   "example": "any"
                 },
-                "wins": {
+                "email": {
                   "example": "any"
                 },
-                "losses": {
+                "favoriteColor": {
+                  "example": "any"
+                },
+                "birthday": {
                   "example": "any"
                 }
               }
@@ -69,7 +61,7 @@
         }
       }
     },
-    "/teams/{id}": {
+    "/users/{id}": {
       "get": {
         "description": "",
         "produces": [
@@ -104,16 +96,19 @@
             "schema": {
               "type": "object",
               "properties": {
-                "name": {
+                "firstName": {
                   "example": "any"
                 },
-                "city": {
+                "lastName": {
                   "example": "any"
                 },
-                "wins": {
+                "email": {
                   "example": "any"
                 },
-                "losses": {
+                "favoriteColor": {
+                  "example": "any"
+                },
+                "birthday": {
                   "example": "any"
                 }
               }
@@ -137,6 +132,30 @@
             "in": "path",
             "required": true,
             "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "firstName": {
+                  "example": "any"
+                },
+                "lastName": {
+                  "example": "any"
+                },
+                "email": {
+                  "example": "any"
+                },
+                "favoriteColor": {
+                  "example": "any"
+                },
+                "birthday": {
+                  "example": "any"
+                }
+              }
+            }
           }
         ],
         "responses": {
