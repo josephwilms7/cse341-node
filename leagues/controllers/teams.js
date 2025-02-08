@@ -1,7 +1,7 @@
 const mongodb = require('../data/database');
 const ObjectId = require('mongodb').ObjectId;
 
-const getAllTeams = async (req, res) => {
+const getAllTeams = async (req, res, next) => {
     //swagger.tags=['Teams']
 
     try {
@@ -15,7 +15,7 @@ const getAllTeams = async (req, res) => {
     }
 };
 
-const getSingleTeam = async (req, res) => {
+const getSingleTeam = async (req, res, next) => {
     //swagger.tags=['Teams']
     try { 
         const teamId = new ObjectId(req.params.id);
@@ -29,7 +29,7 @@ const getSingleTeam = async (req, res) => {
     }
 };
 
-const createTeam = async (req, res) => {
+const createTeam = async (req, res, next) => {
     //swagger.tags=['Teams']
 
     try {
@@ -52,7 +52,7 @@ const createTeam = async (req, res) => {
     }
 };
 
-const updateTeam = async (req, res) => {
+const updateTeam = async (req, res, next) => {
     //swagger.tags=['Teams']
     try {
         const teamId = new ObjectId(req.params.id);
@@ -74,7 +74,7 @@ const updateTeam = async (req, res) => {
     }
 };
 
-const deleteTeam = async (req, res) => {
+const deleteTeam = async (req, res, next) => {
     //swagger.tags=['Teams']
 
     try {
