@@ -49,10 +49,10 @@
                   "example": "any"
                 },
                 "wins": {
-                  "example": "any"
+                  "example": 1
                 },
                 "losses": {
-                  "example": "any"
+                  "example": 1
                 }
               }
             }
@@ -110,10 +110,10 @@
                   "example": "any"
                 },
                 "wins": {
-                  "example": "any"
+                  "example": 1
                 },
                 "losses": {
-                  "example": "any"
+                  "example": 1
                 }
               }
             }
@@ -176,16 +176,16 @@
                   "example": "any"
                 },
                 "home_score": {
-                  "example": "any"
+                  "example": 1
                 },
                 "away_score": {
-                  "example": "any"
+                  "example": 1
                 },
                 "home_penalty_count": {
-                  "example": "any"
+                  "example": 1
                 },
-                "away_penatly_count": {
-                  "example": "any"
+                "away_penalty_count": {
+                  "example": 1
                 },
                 "date": {
                   "example": "any"
@@ -246,16 +246,16 @@
                   "example": "any"
                 },
                 "home_score": {
-                  "example": "any"
+                  "example": 1
                 },
                 "away_score": {
-                  "example": "any"
+                  "example": 1
                 },
                 "home_penalty_count": {
-                  "example": "any"
+                  "example": 1
                 },
-                "away_penatly_count": {
-                  "example": "any"
+                "away_penalty_count": {
+                  "example": 1
                 },
                 "date": {
                   "example": "any"

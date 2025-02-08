@@ -4,9 +4,10 @@ const saveGame = (req, res, next) => {
   const validationRule = {
     home_team: 'required|string',
     away_team: 'required|string',
+    home_score: 'required|integer',
     away_score: 'required|integer',
     home_penalty_count: 'integer',
-    away_penatly_count: 'integer',
+    away_penalty_count: 'integer',
     date: 'required|string'
   };
 

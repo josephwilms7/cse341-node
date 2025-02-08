@@ -41,7 +41,7 @@ const createGame = async (req, res, next) => {
             home_score: req.body.home_score,
             away_score: req.body.away_score,
             home_penalty_count: req.body.home_penalty_count,
-            away_penatly_count: req.body.away_penatly_count,
+            away_penalty_count: req.body.away_penalty_count,
             date: req.body.date
         };
         const response = await mongodb.getDatabase().db().collection("games").insertOne({ _id: gameId, ...game });
@@ -67,7 +67,7 @@ const updateGame = async (req, res, next) => {
             home_score: req.body.home_score,
             away_score: req.body.away_score,
             home_penalty_count: req.body.home_penalty_count,
-            away_penatly_count: req.body.away_penatly_count,
+            away_penalty_count: req.body.away_penalty_count,
             date: req.body.date
         };
         const response = await mongodb.getDatabase().db().collection("games").replaceOne({ _id: gameId }, { _id: gameId, ...game });
